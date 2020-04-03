@@ -56,5 +56,6 @@ Dependencies:
 
 @EnableSwagger2 on StudentRestController.java to enable swagger backend task of generating documentation of endpoint.
 Access JSON representation by http://localhost:8080/v2/api-docs
+
 Swagger-ui enables better readability and understanding of endpoins. http://localhost:8080/swagger-ui.html
 
