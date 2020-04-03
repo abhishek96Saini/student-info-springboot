@@ -4,10 +4,12 @@ import com.abhishek.studentproject.studentinfo.Student;
 import com.abhishek.studentproject.studentinfo.service.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.HashMap;
 
 @RestController
+@EnableSwagger2
 @RequestMapping("/student")  // mapping this class at "/student"
 public class StudentRestController {
 
