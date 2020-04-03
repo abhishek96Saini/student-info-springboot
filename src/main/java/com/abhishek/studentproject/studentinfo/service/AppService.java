@@ -30,7 +30,7 @@ public class AppService {
         //save the object in hashmap
         studentHashMap.putIfAbsent(id, newStudent);
         id++; //increment id for next insertion
-        return studentHashMap.get(id); // return instance of inserted object.
+        return studentHashMap.get(id-1); // return instance of inserted object.
     }
 
     // update details of particular student by studentId

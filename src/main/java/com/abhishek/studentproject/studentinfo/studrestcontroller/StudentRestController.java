@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @RestController
-@RequestMapping("/")  // mapping this class at "/"
+@RequestMapping("/student")  // mapping this class at "/student"
 public class StudentRestController {
 
     private AppService appService;
@@ -21,25 +21,25 @@ public class StudentRestController {
     }
 
     // expose endpoints for functionality
-    @GetMapping("/{studentid}")
+    @GetMapping("/student/{studentid}")
     public Student displayById(@PathVariable("studentid") int studentid){
         return appService.displayById(studentid);
     }
 
-    @GetMapping("/showall")
+    @GetMapping("/student/showall")
     public HashMap<Integer, Student> displayAll(){
         return appService.displayAllStudents();
     }
 
     // add a new student using POST at endpoint "addnew"
-    @PostMapping(value = "/addnew")
+    @PostMapping(value = "/student/addnew")
     public Student addStudent(@RequestBody Student newStudent) {
         System.out.println("Insert student.\n");
         return appService.addStudent(newStudent);
     }
 
     // update details of particular student by studentId
-    @PutMapping("/{studentId}")
+    @PutMapping("/student/{studentId}")
     public Student updateStudent(@PathVariable("studentId") int studentId,@RequestBody Student studentUpdate) {
         return appService.updateStudent(studentId, studentUpdate);
     }

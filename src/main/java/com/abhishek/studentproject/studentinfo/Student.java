@@ -3,6 +3,8 @@ package com.abhishek.studentproject.studentinfo;
 
 //import java.time.LocalDate;
 
+import java.util.HashMap;
+
 public class Student {
 
     int stid;
@@ -11,11 +13,12 @@ public class Student {
     String fname, mname, lname;
     int semester;
     String course;
+    HashMap<String,Float> subjects;
 
     // constructor
     Student(String addressOfResidence,
             String dateOfBirth, String fname, String mname, String lname,
-            int semester, String course) {
+            int semester, String course, HashMap<String,Float> subjects) {
         this.addressOfResidence = addressOfResidence;
         this.dateOfBirth = dateOfBirth;
         this.fname = fname;
@@ -23,6 +26,7 @@ public class Student {
         this.lname = lname;
         this.semester = semester;
         this.course = course;
+        this.subjects = subjects;
     }
 
 
@@ -62,6 +66,10 @@ public class Student {
         return fname + " " +  mname +" "+ lname;
     }
 
+    public HashMap<String, Float> getSubjects() {
+        return subjects;
+    }
+
     public String getCourse() {
         return course;
     }
@@ -99,7 +107,9 @@ public class Student {
         this.mname = mname;
     }
 
-
+    public void setSubjects(HashMap<String, Float> subjects) {
+        this.subjects = subjects;
+    }
 };
 
-// Use of Hashset for creating different instances of student in the server session.
+// Use of Hashmap for creating different instances of student in the server session.
