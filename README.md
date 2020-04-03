@@ -5,7 +5,9 @@ Spring-web contains an embedded Tomcat server. Maven script mvnw allows to execu
 
 
 ## Student Class
+This is the __model class__.
 this class contains attributes as:
+
 __stid:__ `integer` type. unique identification of data values. Value is incremented after every addition.
 
 __dateOfBirth:__ `String` type. TODO convert string to Date object type.
